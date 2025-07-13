@@ -8,8 +8,9 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #23243a 0%, #3a3b5a 60%, #5c258d 100%);
-    font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
+
 body > h1 {
   color: #ff4081;
   font-size: 2.5rem;
@@ -21,6 +22,7 @@ body > h1 {
   text-shadow: 0 2px 12px rgba(90, 40, 120, 0.18);
   font-family: 'Segoe UI', Arial, sans-serif;
 }
+
 #root {
   background: #23243a;
   width: 100%;
@@ -40,6 +42,58 @@ h1 {
   margin-bottom: 28px;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+.password-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.password-display {
+  background: #18192b;
+  border-radius: 8px;
+  padding: 14px 10px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  word-break: break-all;
+  color: #ff4081;
+  font-weight: 500;
+  min-width: 0;
+  flex: 1 1 0;
+  overflow-x: auto;
+  max-width: 220px;
+}
+
+.copy-btn {
+  background: #ff4081;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.copy-btn:active,
+.copy-btn:focus {
+  background: #e73370;
+}
+
+.copied-msg {
+  color: #4caf50;
+  font-weight: 500;
+  margin-left: 8px;
+  font-size: 1rem;
+  transition: opacity 0.3s;
 }
 
 .First {
@@ -88,40 +142,67 @@ label {
   margin: 0;
 }
 
-.password-display {
-  background: #18192b;
-  border-radius: 8px;
-  padding: 14px 10px;
-  margin-bottom: 18px;
-  font-size: 20px;
-  letter-spacing: 1.5px;
-  word-break: break-all;
-  color: #ff4081;
-  font-weight: 500;
-}
-
 input[type="range"]:focus,
-input[type="checkbox"]:focus {
+input[type="checkbox"]:focus,
+.copy-btn:focus {
   outline: 2px solid #ff4081;
   outline-offset: 2px;
 }
 
-@media (max-width: 600px) {
+/* Tablet responsiveness */
+@media (max-width: 900px) {
   #root {
-    font-size: 15px;
-    padding: 16px 8px;
+    max-width: 90vw;
+    padding: 24px 10px;
+    font-size: 16px;
   }
-  h1 {
-    font-size: 20px;
-  }
-  .First {
-    gap: 14px;
-  }
-  label {
-    font-size: 14px;
+  h1, body > h1 {
+    font-size: 2rem;
   }
   .password-display {
-    font-size: 16px;
-    padding: 10px 6px;
+    font-size: 18px;
+    padding: 12px 8px;
+    max-width: 160px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #root {
+    font-size: 14px;
+    padding: 15px 10px;
+    max-width: 90%;
+    border-radius: 10px;
+  }
+  h1, body > h1 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+  .First {
+    gap: 10px;
+  }
+  label {
+    font-size: 13px;
+  }
+  .password-display {
+    font-size: 13px;
+    padding: 8px 4px;
+    max-width: 110px;
+  }
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .copied-msg {
+    font-size: 0.5rem;
+    margin-left: 0;
+    margin-top: 6px;
+  }
+  .password-row {
+    flex-direction: column;
+    gap: 6px;
+    align-items: stretch;
   }
 }
