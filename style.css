@@ -192,7 +192,7 @@ input[type="checkbox"]:focus,
   }
   .form-group {
     
-    align-items: flex-start;
+    align-items: center;
     gap: 4px;
   }
   .copied-msg {
