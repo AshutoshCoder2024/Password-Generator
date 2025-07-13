@@ -1,0 +1,127 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #23243a 0%, #3a3b5a 60%, #5c258d 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body > h1 {
+  color: #ff4081;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px rgba(90, 40, 120, 0.18);
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+#root {
+  background: #23243a;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 28px 28px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  border: 1.5px solid #2d2e4a;
+}
+
+h1 {
+  color: #ff4081;
+  font-size: 26px;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.First {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: stretch;
+  margin-top: 10px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #ff4081;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  background: transparent;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  transition: accent-color 0.2s;
+}
+
+input[type="checkbox"] {
+  accent-color: #ff4081;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: accent-color 0.2s;
+}
+
+label {
+  font-size: 16px;
+  color: #e0e0e0;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+}
+
+.password-display {
+  background: #18192b;
+  border-radius: 8px;
+  padding: 14px 10px;
+  margin-bottom: 18px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  word-break: break-all;
+  color: #ff4081;
+  font-weight: 500;
+}
+
+input[type="range"]:focus,
+input[type="checkbox"]:focus {
+  outline: 2px solid #ff4081;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  #root {
+    font-size: 15px;
+    padding: 16px 8px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .First {
+    gap: 14px;
+  }
+  label {
+    font-size: 14px;
+  }
+  .password-display {
+    font-size: 16px;
+    padding: 10px 6px;
+  }
+}
