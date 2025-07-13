@@ -42,7 +42,7 @@ function PasswordGenerator() {
                             color: "#fff",
                             border: "none",
                             borderRadius: "6px",
-                            padding: "8px 14px",
+                            padding: "4px 8px",
                             cursor: "pointer",
                             fontWeight: 600,
                             fontSize: "20px",
